@@ -4,9 +4,69 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>What happens when you type google.com in your browser and press Enter?</h1>
+
+    <img src="web_infra.jpg" alt="web infrastructure">
+
+    <h2>DNS request:</h2>
+    <p>
+      The first thing that the browser needs to do when you type "google.com" is look up the ip address associated with th domain (google.com in this case), 
+      the browser does that by using DNS (Domain Name System), you can think of DNS as a very large phonebook, it maps the host names with thier actual IP adresses,
+    </p>
+
+    <h2>TCP/IP:</h2>
+    <p>
+      An IP (Internet Protocol) adress (such as 142.250.201.78) is the physical location of the server.
+      Now that your browsee knows the location of the server, it uses a TCP (Tracnsmission Control Protocol) connection to communicate with the server.
+    </p>
+
+    <h2>Firewall:</h2>
+    <p>
+      The resquests from your browser and the responses from the server may pass through a Firewall, which is a gatekeeper that prevents unauthorized access.
+      The firewall rejects any request that isn't comming to 443 port (the HTTPS port).
+    </p>
+
+    <h2>HTTPS/SSL:</h2>
+    <p>
+      Since google uses a secure protocol HTTPS (Hyper Text Transfer Protocol Secure) for connections, the data trasnfer between the browser and their server will be encrypted, this encyption is made possible by SSL (Secure Socket Layer).
+      So now the browser knows that it must send requests to the HTTPS port 443.
+    </p>
+
+    <h2>Load Balancer:</h2>
+    <p>
+      Google servers failure is a highly unlikely encounter, this is because Google like any other large IT organization uses tens or hundreds of servers to handle user requests for all kinds of services, the traffic handeling for those servers is handled by another type of servers called Load Balancers.
+      Load Balancer have the sole purpose of distrubuting the load optimally over a set of servers.
+    </p>
+
+    <h2>Web Server:</h2>
+    <p>
+      A web server is a software running on the server (the physical one), and it is responsible for a swering and serving the static content (usually html pages, but it also serves js scripts, css stylesheets, and other media such as images..).
+    </p>
+
+    <h2>Application Server:</h2>
+    <p>
+      Google is a modern website, which means that it uses an Application server, which is also a software running on the physical server.
+      an Application server generates dynamic personalized content, in the case of google it might be search results for example or user authentication.
+    </p>
+
+    <h2>Database:</h2>
+    <p>
+      Google behind the scenes may trigger database queries to retreive all kinds of data, previous searches for example. 
+    </p>
+
+    <h4>Further reading:</h4>
+    <a href="https://en.m.wikipedia.org/wiki/Domain_Name_System">DNS request</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/Internet_protocol_suite">TCP/IP</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/Firewall_(computing)">Firewall</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/HTTPS">HTTPS/SSL</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/Load_balancing_(computing)">Load-balancer</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/Web_server">Web server</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/Application_server">Application server</a><br>
+    <a href="https://en.m.wikipedia.org/wiki/Database">Database</a><br>
+
   </body>
 </html>
